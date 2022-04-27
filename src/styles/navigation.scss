@@ -1,0 +1,82 @@
+.navigation {
+    // position: relative;
+    z-index: 1;
+    width: $navigationWidth;
+    height: 100vh;
+    background: linear-gradient(to right, rgb(47, 60, 60), rgb(67, 103, 103));
+    
+    &_backimage {
+        background-image: url(../resources/bg.png);
+        width: $navigationWidth;
+        height: 100vh;
+        opacity: .03;
+        position: absolute;
+    }
+    &_logo {
+        margin: 2px 20px;
+        transition: 1s;
+        opacity: .1;
+    }
+    &_link {
+        display: block;
+        color: white;
+        white-space: nowrap;
+        font-size: 20px;
+        position: relative;
+        width: 210px;
+        height: 50px;
+        background-color:rgba(76, 116, 116, .2);
+        text-shadow: 1px 1px 1px black;
+        text-decoration: none;
+        padding: 13px;
+        margin: 10px 0;
+        border-radius: 0 3px 3px 0;
+        transition: .2s;
+        cursor: pointer;
+        &_text {
+            font-size: 16px;
+        }
+        &_in {
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color:rgba(117, 159, 159, .1);
+            width: 10px;
+            height: 100%;
+            border-radius: 3px;
+        }
+        &:hover {
+            width: 220px;
+            padding-left: 25px;
+            background-color:rgba(117, 159, 159, .5);
+            transform: scale(1.1);
+            // .navigation_link_in {
+            //     // background-color:rgb(21, 234, 57);
+            //     background: radial-gradient(white, rgb(21, 234, 57));
+            //     box-shadow: 0 0 8px rgb(21, 234, 57);
+            // }
+        }
+        &_hover {
+            width: 220px;
+            padding-left: 25px;
+            background-color:rgba(117, 159, 159, .5);
+            transform: scale(1.1);
+            .navigation_link_in {
+                // background-color:rgb(21, 234, 57);
+                background: radial-gradient(white, rgb(21, 234, 57));
+                box-shadow: 0 0 8px rgb(21, 234, 57);
+            }
+        }
+    }
+    &_workhours {
+        position: absolute;
+        bottom: 25px;
+        width: $navigationWidth;
+        text-align: center;
+        color: white;
+        text-shadow: 1px 1px 1px black;
+        opacity: .9;
+    }
+    
+}
+
