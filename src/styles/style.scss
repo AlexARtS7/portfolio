@@ -4,6 +4,11 @@
 	src: url('../resources/fonts/MontserratAlternates-Light.ttf'); 
 }
 
+@font-face {
+	font-family: 'Сorinthia'; 
+	src: url('../resources/fonts/Сorinthia.ttf'); 
+}
+
 @import './navigation.scss';
 @import './main.scss';
 
@@ -33,15 +38,16 @@ body {
         opacity: .03;
         position: absolute;
         animation: bgTranc 45s infinite linear;
-        // transform: scale(.5);
+        z-index: -2;
     }
 }
 
-// .bgcontainer {
-//     z-index: 5;
-// }
+.bgcontainer {
+    z-index: -5;
+}
 
 .flex {
+    display: flex;
     &_between {
         display: flex;
         justify-content: space-between;

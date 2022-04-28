@@ -1,21 +1,21 @@
 import { CodeBlock } from "./others/codeblock/CodeBlock"
 
-
-//Привет!, Я Александр. WebFrontend разработчик.
-export const Main = () => {
+export default function Main() {
     return (
-        <>
-            <div className='main_title_block animation_top_in'>
-                <h1 className='main_title'><br/>Привет!<br/><br/>Меня зовут Александр,<br/>Я WebFrontend разработчик.</h1> 
+        <div className='main main_center'>
+            <div className='main_robo_block'>
+                <div className='main_robo'>
+                    <div className='main_robo_hand'/>
+                    <div className='main_robo_ball'/>
+                </div>                        
             </div>
-            
-            <div className='buf'/>
-            <div className='main_content animation_bottom_in'>
-                {/* <div className='main_block_code'>
-                    <CodeBlock/>
-                </div>           */}
-            </div>
-        </>
+            <div className='main_line'/>
+            <div>
+                <h1 className='main_title'><br/>Привет!<br/><br/>Меня зовут Александр,<br/>Я занимаюсь веб разработкой.</h1>
+                <div className='main_description main_description_buf'>Сайты - приложеня типа SPA (Single Page Application).</div>
+                <div className='main_description'>Стек: Js, Html, Css, Scss, React, React-Redux, Redux-Saga.</div>
+            </div>          
+        </div>
     )
 }
 //

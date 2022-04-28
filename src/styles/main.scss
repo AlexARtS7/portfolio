@@ -1,56 +1,129 @@
 
 .main {
+    height: calc(100% - 85px);
+    width: 100%;
+    animation: showTop 1s;
+    position: relative;
     &_title {
-        font-size: 52px;
+        font-size: 40px;
+        color: rgb(255, 255, 255);
+        text-shadow: 2px 2px 2px black;
+    }
+    &_description {
+        font-family: 'Сorinthia', 'MontserratAlternates';
+        margin-top: 20px;
         color: white;
+        font-size: 38px;
+        letter-spacing: 5px;
+        text-shadow: 2px 2px 1px black;
+        &_buf {
+            margin-top: 120px;
+        }
+    }
+    &_line {
+        margin: 30px;
+        width: 5px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px white;
+        background: radial-gradient(rgb(255, 255, 255), rgb(229, 243, 129));
+    }
+    &_robo {
+        margin: 30px auto;
+        width: 350px;
+        height: 400px;        
+        background: url('../resources/robo.svg') no-repeat;
+        background-size: cover;
+        filter: drop-shadow(0 0 18px #000);
+        position: relative;
         &_block {
-            z-index: 5;
+            margin: auto 0;
+        }
+        &_hand {
+            width: 150px;
+            height: 95px;
+            background: url('../resources/roboHand.svg') no-repeat;
+            background-size: cover;
+            filter: drop-shadow(0 0 18px #000);
+            top: 117px;
+            left: 20px;
             position: absolute;
-            text-shadow: 2px 2px 1px black;
-            // box-shadow: 0 0 2px rgba(246, 242, 242, .5);
+            transform-origin: 100% 100%;
+            animation: handRotate 1.5s infinite;
+        }
+        &_ball {
+            position: absolute;
+            top: 200px;
+            left: 160px;
+            width: 14px;
+            height: 16px;
             border-radius: 10px;
-            // top: 20px;
-            // left: 200px;
-            // right: 50px;
-            // width: 680px;
-            // height: 170px;
-            // background: linear-gradient(45deg, rgb(69, 107, 118) 30%, rgba(70, 89, 108, .5) 60%);
-            // background-color: rgb(240, 246, 247);            
-            padding: 20px 40px;
-        }
-        
-        &_letter {
-            display: inline-block;
-            margin-right: 3px;
-            transition: .9s;
-            cursor: pointer;
-            &:hover {
-                color:rgb(157, 164, 17);
-                // transform: rotate( (180deg) ); 
-                transform: scale(1.2);
-                text-shadow: 0px -10px 2px black;   
-                transition: .09s;          
-            }
+            background-color:rgb(156, 158, 158);
+            box-shadow: -1px 0 1px black;
         }
     }
-    &_content {
-        // height: calc(100vh - $mainBuf);
-        width: 100%;
-        padding: 20px 0 20px 20px;
+    &_center {
+        display: flex;
+        justify-content: center;
     }
-    &_block {
-        &_code {
-            overflow-y: auto;
-            height: 100%;
-            padding: 20px;
-            background-color:rgba(35, 43, 45, .8);
-            border-radius:5px;
-        }
+}
+
+@keyframes showTop {
+    from {top: -120vh;}    
+    to {top: 0;}  
+}
+
+@keyframes handRotate {
+    0%, 100% {
+        transform: rotate(-15deg);
+    }    
+    50% {
+        transform: rotate(-2deg);
+    } 
+}
+
+@media (max-width: 1000px) {
+    .main_description {
+        font-size: 30px;
     }
-    &_card {
-        text-shadow: 1px 1px 1px black;
-        margin-left: 20px;
-        color: white;
-        cursor: grab;
+    .main_description_buf {
+        margin-top: 90px;
+    }
+}
+
+@media (max-width: 850px) {
+    .main_robo {
+        width: 250px;
+        height: 280px;
+    }
+    .main_robo_hand {
+        width: 100px;
+        height: 70px;
+        top: 83px;
+        left: 18px;
+    }
+    .main_robo_ball {
+        top: 141px;
+        left: 110px;
+        height: 14px;
+    }
+    .main_title {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 550px) {
+    .main_title {
+        font-size: 16px;
+        text-align: center;
+    }
+    .main_center {
+        display: block;
+    }
+    .main_description {
+        font-size: 25px;
+        text-align: center;
+    }
+    .main_description_buf {
+        margin-top: 30px;
     }
 }
