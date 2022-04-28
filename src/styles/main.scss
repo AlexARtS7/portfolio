@@ -81,16 +81,16 @@
     } 
 }
 
-@media (max-width: 1000px) {
+@media screen and  (max-width: 1000px), (max-device-height: 600px) {
     .main_description {
         font-size: 30px;
     }
     .main_description_buf {
-        margin-top: 90px;
+        margin-top: 70px;
     }
 }
 
-@media (max-width: 850px) {
+@media screen and (max-width: 850px), (max-device-height: 700px) {
     .main_robo {
         width: 250px;
         height: 280px;
@@ -111,7 +111,7 @@
     }
 }
 
-@media (max-width: 550px) {
+@media screen and (max-width: 650px) {
     .main_title {
         font-size: 16px;
         text-align: center;
@@ -122,6 +122,41 @@
     .main_description {
         font-size: 25px;
         text-align: center;
+        letter-spacing: 2px;
+    }
+    .main_description_buf {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-device-height: 750px) {
+    .main_robo {
+        width: 150px;
+        height: 172px;
+        margin: 10px auto;
+    }
+    .main_robo_hand {
+        width: 63px;
+        height: 40px;
+        top: 51px;
+        left: 10px;
+    }
+    .main_robo_ball {
+        top: 85px;
+        left: 66px;
+        height: 10px;
+        width: 10px;
+    }
+}
+
+@media screen and (max-device-height: 550px) {
+    .main_title {
+        font-size: 14px;
+    }
+    .main_description {
+        font-size: 20px;
+        text-align: center;
+        letter-spacing: 2px;
     }
     .main_description_buf {
         margin-top: 30px;
