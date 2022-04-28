@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './styles/style.scss';
 
-import { Navigation } from './components/Navigation';
+import Navigation from './components/Navigation';
 import { Main } from './components/Main';
 
 import Bgt from './components/others/bg/bgt';
@@ -15,15 +15,20 @@ const App = () => {
     
     return (
         <Router>
-            <div className='app flex_between'>
+            <div className='app'>
+                <div className='bgcontainer'>
+                    {/* <Bgs/> */}
+                    <Bgt/>
+                </div>
+                <div className='app_backimage'/>
                 <Navigation/>            
-                <div className='content'>
+                {/* <div className='content'>
                     <Bgs/>
                     {/* <Bgt/>                                            */}
-                    <Routes>                    
+                    {/* <Routes>                    
                         <Route path='/' element={<Main/>}/>
-                    </Routes>                
-                </div>
+                    </Routes>                 */}
+                {/* </div> */} 
             </div>    
         </Router>
             
