@@ -100,6 +100,11 @@
     .navigation_led_active {
         margin: 5px auto;
     }
+    .navigation {
+        left:  5px;
+        right: 5px;
+        padding: 3px 5px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -115,11 +120,6 @@
     }
     .navigation_date {
         display: none;
-    }
-    .navigation {
-        left:  5px;
-        right: 5px;
-        padding: 3px 5px;
     }
 }
 

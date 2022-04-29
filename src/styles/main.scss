@@ -166,3 +166,18 @@
         margin-top: 30px;
     }
 }
+
+@media screen and (max-device-height: 350px) {
+    .main_title {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    .main_description {
+        font-size: 12px;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+    .main_robo {
+        margin: 4px;
+    }
+}
