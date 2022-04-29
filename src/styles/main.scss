@@ -1,10 +1,13 @@
 
 .main {
-    height: calc(100% - 80px);
+    // height: calc(100vh - 80px);
+    height: 100vh;
     width: 100%;
     animation: showTop 1s;
     position: relative;
     padding: 5px;
+    padding-bottom: 80px;
+    display: block;
     &_title {
         font-size: 40px;
         color: rgb(255, 255, 255);
@@ -83,101 +86,101 @@
     } 
 }
 
-@media screen and  (max-width: 1000px), (max-device-height: 600px) {
-    .main_description_buf {
-        margin-top: 70px;
-    }
-}
+// @media screen and  (max-width: 1000px), (max-device-height: 600px) {
+//     .main_description_buf {
+//         margin-top: 70px;
+//     }
+// }
 
-@media screen and (max-width: 850px), (max-device-height: 700px) {
-    .main_robo {
-        width: 250px;
-        height: 280px;
-    }
-    .main_robo_hand {
-        width: 100px;
-        height: 70px;
-        top: 83px;
-        left: 18px;
-    }
-    .main_robo_ball {
-        top: 141px;
-        left: 110px;
-        height: 14px;
-    }
-    .main_title {
-        font-size: 30px;
-    }
-    .main_description {
-        font-size: 20px;
-        letter-spacing: 2px;
-    }
-}
+// @media screen and (max-width: 850px), (max-device-height: 700px) {
+//     .main_robo {
+//         width: 250px;
+//         height: 280px;
+//     }
+//     .main_robo_hand {
+//         width: 100px;
+//         height: 70px;
+//         top: 83px;
+//         left: 18px;
+//     }
+//     .main_robo_ball {
+//         top: 141px;
+//         left: 110px;
+//         height: 14px;
+//     }
+//     .main_title {
+//         font-size: 30px;
+//     }
+//     .main_description {
+//         font-size: 20px;
+//         letter-spacing: 2px;
+//     }
+// }
 
-@media screen and (max-width: 650px) {
-    .main_title {
-        font-size: 24px;
-        text-align: center;
-        margin-top: 0;
-    }
-    .main_center {
-        display: block;
-    }
-    .main_description {
-        font-size: 20px;
-        text-align: center;
-        letter-spacing: 2px;
-    }
-    .main_description_buf {
-        margin-top: 30px;
-    }
-}
+// @media screen and (max-width: 650px) {
+//     .main_title {
+//         font-size: 24px;
+//         text-align: center;
+//         margin-top: 0;
+//     }
+//     .main_center {
+//         display: block;
+//     }
+//     .main_description {
+//         font-size: 20px;
+//         text-align: center;
+//         letter-spacing: 2px;
+//     }
+//     .main_description_buf {
+//         margin-top: 30px;
+//     }
+// }
 
-@media screen and (max-device-height: 780px) {
-    .main_robo {
-        width: 150px;
-        height: 172px;
-    }
-    .main_robo_hand {
-        width: 63px;
-        height: 40px;
-        top: 51px;
-        left: 10px;
-    }
-    .main_robo_ball {
-        top: 85px;
-        left: 66px;
-        height: 10px;
-        width: 10px;
-    }
-}
+// @media screen and (max-device-height: 780px) {
+//     .main_robo {
+//         width: 150px;
+//         height: 172px;
+//     }
+//     .main_robo_hand {
+//         width: 63px;
+//         height: 40px;
+//         top: 51px;
+//         left: 10px;
+//     }
+//     .main_robo_ball {
+//         top: 85px;
+//         left: 66px;
+//         height: 10px;
+//         width: 10px;
+//     }
+// }
 
-@media screen and (max-device-height: 680px), (max-width: 350px) {
-    .main_title {
-        font-size: 18px;
-        margin-top: 10px;
-    }
-    .main_description {
-        font-size: 16px;
-        text-align: center;
-        letter-spacing: 2px;
-    }
-    .main_description_buf {
-        margin-top: 30px;
-    }
-}
+// @media screen and (max-device-height: 680px), (max-width: 350px) {
+//     .main_title {
+//         font-size: 18px;
+//         margin-top: 10px;
+//     }
+//     .main_description {
+//         font-size: 16px;
+//         text-align: center;
+//         letter-spacing: 2px;
+//     }
+//     .main_description_buf {
+//         margin-top: 30px;
+//     }
+// }
 
-@media screen and (max-device-height: 350px) {
-    .main_title {
-        font-size: 14px;
-        margin-top: 10px;
-    }
-    .main_description {
-        font-size: 12px;
-        text-align: center;
-        letter-spacing: 2px;
-    }
-    .main_robo {
-        margin: 4px;
-    }
-}
+// @media screen and (max-device-height: 350px) {
+//     .main_title {
+//         font-size: 14px;
+//         margin-top: 10px;
+//     }
+//     .main_description {
+//         font-size: 12px;
+//         text-align: center;
+//         letter-spacing: 2px;
+//     }
+//     .main_robo {
+//         margin: 4px;
+//     }
+// }

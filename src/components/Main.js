@@ -15,7 +15,7 @@ export default function Main() {
                 <div className='main_description main_description_buf'>Сайты - приложения типа SPA (Single Page Application).</div>
                 <div className='main_description'>Стек: Js, Html, Css, Scss, React, React-Redux, Redux-Saga.</div>
             </div>          
-        </div>
+        </div>        
     )
 }
 //
