@@ -11,8 +11,8 @@ export default function Main() {
             </div>
             <div className='main_line'/>
             <div>
-                <h1 className='main_title'><br/>Привет!<br/><br/>Меня зовут Александр,<br/>Я занимаюсь веб разработкой.</h1>
-                <div className='main_description main_description_buf'>Сайты - приложеня типа SPA (Single Page Application).</div>
+                <h1 className='main_title'>Привет!<br/><br/>Меня зовут Александр,<br/>Я занимаюсь веб разработкой.</h1>
+                <div className='main_description main_description_buf'>Сайты - приложения типа SPA (Single Page Application).</div>
                 <div className='main_description'>Стек: Js, Html, Css, Scss, React, React-Redux, Redux-Saga.</div>
             </div>          
         </div>

@@ -11,14 +11,14 @@ import Main from './components/Main';
 import Bgt from './components/others/bg/bgt';
 import Bgs from './components/others/bg/bgs';
 
+const bg = Math.floor(Math.random() * 2);
+
 const App = () => {
-    
     return (
         <Router>
             <div className='app'>
                 <div className='bgcontainer'>
-                    {/* <Bgs/> */}
-                    <Bgt/>
+                    {bg ? <Bgs/>:<Bgt/>}
                 </div>                
             <div className='app_backimage'/>
             <Navigation/>                                                               

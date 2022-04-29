@@ -4,9 +4,10 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from '../resources/logo.svg';
 
 const link = [
-    {rus: 'Обо Мне', en: 'about', href: '/'}, 
-    {rus: 'Работы', en: 'works', href: '/works'},
-    {rus: 'Скилы', en: 'skils', href: '/skils'}];
+    {rus: 'ОбоМне', href: '/'}, 
+    {rus: 'Работы', href: '/works'},
+    {rus: 'Скилы', href: '/skils'},
+    {rus: 'Контакты', href: '/contacts'}];
 
 export default function Navigation () {
     const navigate = useNavigate();
@@ -32,14 +33,14 @@ export default function Navigation () {
             <Link 
                 className={active === i ? 'navigation_link navigation_activelink':'navigation_link'}
                 to={item.href}
-                key={i}>
-                    {item.rus}
+                key={i}>{item.rus}
+                    
                     <div className={active === i ? 'navigation_led_active':'navigation_led'}></div>
                 
             </Link>
             )}
         </div>
-        <div className='navigation_date'>2019-{new Date().getFullYear()}</div>
+        <div className='navigation_date'>2019 - {new Date().getFullYear()}</div>
         </div>
     )
 }

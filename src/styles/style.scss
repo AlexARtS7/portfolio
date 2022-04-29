@@ -1,12 +1,7 @@
 
 @font-face {
 	font-family: 'MontserratAlternates'; 
-	src: url('../resources/fonts/MontserratAlternates-Light.ttf'); 
-}
-
-@font-face {
-	font-family: 'Сorinthia'; 
-	src: url('../resources/fonts/Сorinthia.ttf'); 
+	src: url('../resources/fonts/President-cyr.ttf'); 
 }
 
 @import './navigation.scss';
@@ -30,12 +25,12 @@ body {
     width: 100vw;
     overflow: hidden;
     position: fixed;
-    background-color: rgb(26, 30, 30);
+    background-color: rgb(30, 44, 44);
     &_backimage {
         background: url(../resources/bg.jpg) repeat;
         width: 100vw;
         height: 200vh;
-        opacity: .03;
+        opacity: .08;
         position: absolute;
         animation: bgTranc 45s infinite linear;
         z-index: -2;

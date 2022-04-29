@@ -6,11 +6,13 @@
     bottom: 14px;
     position: fixed;
     border-radius: 5px;
-    padding: 3px 10px;
+    padding: 3px 5px;
     animation: showNavigation 1s;
+    box-shadow: 0 2px 8px black;
+    z-index: 10;
     &_logo {
         height: 100%;
-        opacity: .3;
+        opacity: .5;
         pointer-events: none;
     }
     &_bg {
@@ -27,15 +29,18 @@
         margin: auto 0;
         color: white;
         text-shadow: 2px 2px 1px black;
+        text-align: center;
     }
     &_controls {
         padding: 5px 0 2px;
-        white-space: nowrap;
-        width: calc(100% - 150px);
+        white-space: nowrap;   
+        width: 100%;
+        margin: 0 4px;
     }
     &_link {
-        background-color:rgba(76, 116, 116, .6);
+        background: linear-gradient(to top, rgba(255, 255, 255, .5), rgba(69, 85, 69, 0.5) 95%);
         color: white;
+        letter-spacing: 2px;
         display: inline-block;
         text-align: center;
         font-size: 18px;
@@ -44,35 +49,35 @@
         text-decoration: none;
         text-shadow: 2px 2px 1px black;
         box-shadow: -2px -2px 1px rgba(0, 0, 0, .3);
-        padding: 4px 2px;
-        width: 25%;
+        padding: 2px 2px;
+        width: 20%;
         height: 100%;
-        margin: 0 10px;
+        margin: 0 5px;
         transition: .3s;
         &:hover {
             background-color:rgba(82, 184, 143, 0.7);
         }
     }
     &_activelink {
-        width: 50%;
-        background: linear-gradient(to top, rgba(48, 162, 33, 0.7), rgba(116, 167, 109, 0.5));
+        width: 40%;
+        background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(69, 85, 69, 0.5) 95%);
     }
     &_led {
         width: 18px;
         height: 7px;
-        margin: 5px auto;
+        margin: 4px auto;
         border-radius: 3px;
-        background-color:rgba(160, 241, 241, .3);
-        box-shadow: -2px -2px 1px rgba(0, 0, 0, .3);
+        background-color:rgba(81, 91, 91, 0.4);
+        box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.5);
         transition: .5s;
         &_active {
             width: 80%;
             height: 7px;
-            margin: 5px auto;
+            margin: 4px auto;
             border-radius: 3px;
-            background: radial-gradient( rgb(184, 250, 190), rgb(42, 255, 4));
-            box-shadow: -2px -2px 4px rgba(0, 0, 0, .3);
-            transition: 1s;
+            background: radial-gradient( rgb(85, 237, 98), rgb(37, 175, 13) 90%);
+            box-shadow: -1px -1px 2px rgba(0, 0, 0, .5);
+            transition: .7s;
         }
     }
 }
@@ -85,36 +90,48 @@
 @media (max-width: 850px) {
     .navigation_link {
         font-size: 16px;
-        margin: 0 5px;
+        margin: 0 2px;
+        padding-top: 4px;
+        letter-spacing: 1px;
+    }
+    .navigation_led {
+        margin: 5px auto;
+    }
+    .navigation_led_active {
+        margin: 5px auto;
     }
 }
 
 @media (max-width: 600px) {
     .navigation_link {
-        font-size: 9px;
-        margin: 0 3px;
+        font-size: 12px;
+        padding-top: 4px;
+    }
+    .navigation_led {
+        margin: 9px auto;
+    }
+    .navigation_led_active {
+        margin: 9px auto;
     }
     .navigation_date {
-        font-size: 10px;
-    }
-    .navigation_controls {
-        width: calc(100% - 120px);
+        display: none;
     }
     .navigation {
         left:  5px;
         right: 5px;
         padding: 3px 5px;
     }
-    .navigation_led {
-        margin: 12px auto;
-    }
-    .navigation_led_active {
-        margin: 12px auto;
-    }
 }
 
 @media (max-width: 400px) {
     .navigation_link {
-        font-size: 7px;
+        font-size: 10px;
+        padding-top: 7px;
+    }
+    .navigation_led {
+        margin: 8px auto;
+    }
+    .navigation_led_active {
+        margin: 8px auto;
     }
 }

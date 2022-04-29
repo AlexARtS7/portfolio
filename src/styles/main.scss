@@ -1,6 +1,6 @@
 
 .main {
-    height: calc(80% - 50px);
+    height: calc(100% - 80px);
     width: 100%;
     animation: showTop 1s;
     position: relative;
@@ -8,12 +8,13 @@
         font-size: 40px;
         color: rgb(255, 255, 255);
         text-shadow: 2px 2px 2px black;
+        letter-spacing: 4px;
+        margin-top: 60px;
     }
     &_description {
-        font-family: 'Сorinthia', 'MontserratAlternates';
         margin-top: 20px;
         color: white;
-        font-size: 38px;
+        font-size: 20px;
         letter-spacing: 5px;
         text-shadow: 2px 2px 1px black;
         &_buf {
@@ -25,7 +26,7 @@
         width: 5px;
         border-radius: 5px;
         box-shadow: 0 0 5px white;
-        background: radial-gradient(rgb(255, 255, 255), rgb(229, 243, 129));
+        background: radial-gradient(rgb(255, 255, 255), rgb(240, 245, 208));
     }
     &_robo {
         margin: 30px auto;
@@ -33,7 +34,7 @@
         height: 400px;        
         background: url('../resources/robo.svg') no-repeat;
         background-size: cover;
-        filter: drop-shadow(0 0 18px #000);
+        filter: drop-shadow(0 0 8px #000);
         position: relative;
         &_block {
             margin: auto 0;
@@ -43,7 +44,7 @@
             height: 95px;
             background: url('../resources/roboHand.svg') no-repeat;
             background-size: cover;
-            filter: drop-shadow(0 0 18px #000);
+            filter: drop-shadow(0 0 8px #000);
             top: 117px;
             left: 20px;
             position: absolute;
@@ -82,9 +83,6 @@
 }
 
 @media screen and  (max-width: 1000px), (max-device-height: 600px) {
-    .main_description {
-        font-size: 30px;
-    }
     .main_description_buf {
         margin-top: 70px;
     }
@@ -109,18 +107,23 @@
     .main_title {
         font-size: 30px;
     }
+    .main_description {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
 }
 
 @media screen and (max-width: 650px) {
     .main_title {
-        font-size: 16px;
+        font-size: 24px;
         text-align: center;
+        margin-top: 0;
     }
     .main_center {
         display: block;
     }
     .main_description {
-        font-size: 25px;
+        font-size: 20px;
         text-align: center;
         letter-spacing: 2px;
     }
@@ -133,7 +136,6 @@
     .main_robo {
         width: 150px;
         height: 172px;
-        margin: 10px auto;
     }
     .main_robo_hand {
         width: 63px;
@@ -151,10 +153,11 @@
 
 @media screen and (max-device-height: 550px) {
     .main_title {
-        font-size: 14px;
+        font-size: 18px;
+        margin-top: 10px;
     }
     .main_description {
-        font-size: 20px;
+        font-size: 16px;
         text-align: center;
         letter-spacing: 2px;
     }
