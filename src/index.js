@@ -70,9 +70,14 @@ const Main = () => {
 const App = () => {
     return (
         <Router>
+            <Main/>
             <Routes>      
-                {/* {links.map(item => <Route path={item.href} element={<></>}/>)}              */}
-                <Route path='*' element={<Main/>}/> 
+                {links.map(item => <Route path={item.href} element={<><div style={{'position':'fixed'}}>{item.href}</div></>}/>)}             
+                {/* <Route path='/' element={<></>}/> 
+                <Route path='/works' element={<>
+                <div style={{'position':'fixed'}}>sds</div>
+                </>}/>  */}
+                <Route path='*' element={<></>}/> 
             </Routes> 
         </Router>
     )
