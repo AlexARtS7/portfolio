@@ -1,14 +1,14 @@
 .navigation {
-    background: linear-gradient(to top, rgba(47, 60, 60, .7), rgba(67, 103, 103, .8));
+    background: linear-gradient(to top, rgba(47, 60, 60, .9), rgba(67, 103, 103, .9));
     left:  30px;
     right: 30px;
     height: 60px;
-    bottom: 14px;
+    bottom: 16px; 
     position: fixed;
     border-radius: 5px;
     padding: 3px 5px;
     animation: showNavigation 1s;
-    box-shadow: 0 2px 8px black;
+    box-shadow: 0 1px 2px black;
     z-index: 10;
     &_logo {
         height: 100%;
@@ -26,9 +26,10 @@
         z-index: -1;
     }
     &_date {
+        font-family: 'MontserratAlternates', sans-serif;
         margin: auto 0;
         color: white;
-        text-shadow: 2px 2px 1px black;
+        text-shadow: -1px -1px 1px black;
         text-align: center;
     }
     &_controls {
@@ -39,21 +40,24 @@
     }
     &_link {
         background: linear-gradient(to top, rgba(255, 255, 255, .5), rgba(69, 85, 69, 0.5) 95%);
-        color: white;
+        color: rgb(255, 255, 255);
         letter-spacing: 2px;
         display: inline-block;
+        font-family: 'MontserratAlternates', sans-serif;
         text-align: center;
-        font-size: 18px;
-        border-radius: 3px;
+        font-size: 16px;
+        border-radius: 20px 5px;
         border: .5px solid rgba(255, 255, 255, .2);
         text-decoration: none;
-        text-shadow: 2px 2px 1px black;
+        text-shadow: -1px -1px 2px black;
         box-shadow: -2px -2px 1px rgba(0, 0, 0, .3);
-        padding: 2px 2px;
+        padding: 2px;
+        padding-top: 9px;
         width: 20%;
         height: 100%;
         margin: 0 5px;
         transition: .3s;
+        position: relative;
         &:hover {
             background-color:rgba(82, 184, 143, 0.7);
         }
@@ -64,59 +68,54 @@
     }
     &_led {
         width: 18px;
-        height: 7px;
-        margin: 4px auto;
+        height: 2px;
+        margin: 0 auto;
         border-radius: 3px;
         background-color:rgba(81, 91, 91, 0.4);
         box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.5);
         transition: .5s;
+        &_block {
+            width: 100%;
+            position: absolute;
+            bottom:6px;
+            left: 0;
+        }
         &_active {
             width: 80%;
-            height: 7px;
-            margin: 4px auto;
-            border-radius: 3px;
-            background: radial-gradient( rgb(85, 237, 98), rgb(37, 175, 13) 90%);
-            box-shadow: -1px -1px 2px rgba(0, 0, 0, .5);
-            transition: .7s;
+            background: radial-gradient( rgb(155, 254, 165), rgb(85, 212, 62) 90%);
         }
     }
 }
 
 @keyframes showNavigation {
     from {bottom: -20vh;}    
-    to {bottom: 14px;}  
+    to {bottom: 16px;}  
+}
+@keyframes showNavigationDevice {
+    from {bottom: -20vh;}    
+    to {bottom: 4px;}  
 }
 
 @media (max-width: 850px) {
     .navigation_link {
-        font-size: 16px;
-        margin: 0 2px;
-        padding-top: 4px;
+        font-size: 12px;
         letter-spacing: 1px;
-    }
-    .navigation_led {
-        margin: 5px auto;
-    }
-    .navigation_led_active {
-        margin: 5px auto;
+        margin: 0 2px;
+        padding-top: 12px;
     }
     .navigation {
-        left:  5px;
-        right: 5px;
+        left:  4px;
+        right: 4px;
         padding: 3px 5px;
+        bottom: 4px;
+        animation: showNavigationDevice 1s;
     }
 }
 
 @media (max-width: 600px) {
     .navigation_link {
-        font-size: 12px;
-        padding-top: 4px;
-    }
-    .navigation_led {
-        margin: 9px auto;
-    }
-    .navigation_led_active {
-        margin: 9px auto;
+        font-size: 8px;
+        padding-top: 15px;
     }
     .navigation_date {
         display: none;
@@ -125,13 +124,9 @@
 
 @media (max-width: 400px) {
     .navigation_link {
-        font-size: 10px;
-        padding-top: 7px;
-    }
-    .navigation_led {
-        margin: 8px auto;
-    }
-    .navigation_led_active {
-        margin: 8px auto;
+        font-size: 7px;
+        padding-top: 16px;
+        // letter-spacing: 0;
     }
 }
+

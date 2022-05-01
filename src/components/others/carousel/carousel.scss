@@ -1,0 +1,51 @@
+.carousel {
+    overflow: hidden;
+    // white-space: nowrap;
+    height: 100vh;
+    width: 100vw;
+    &_block {
+        height: 100%;
+        width: 100%;        
+    }
+}
+
+.outScreen {
+    position: absolute;
+    top: -100%;
+}
+
+.animation {
+    &_inLeft {
+        animation: inLeft .5s;
+        position: absolute;
+    }
+    &_inRight {
+        animation: inRight .5s;
+        position: absolute;
+    }
+    &_outLeft {
+        animation: outLeft .5s;
+        position: absolute;
+    }
+    &_outRight {
+        animation: outRight .5s;
+        position: absolute;
+    }
+}
+
+@keyframes inLeft {
+    from {left:-100%;}
+    to {left:0;}
+}
+@keyframes outLeft {
+    from {left:0;}
+    to {left:-100%;}
+}
+@keyframes inRight {
+    from {right:-100%;}
+    to {right:0;}
+}
+@keyframes outRight {
+    from {right:0;}
+    to {right:-100%;}
+}
