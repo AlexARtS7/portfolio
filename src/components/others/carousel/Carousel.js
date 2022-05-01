@@ -32,9 +32,13 @@ export default function Carousel({activeRoute, links}) {
     return (        
         <div className='carousel'>
             {links.map((item, i) => 
-            (activeSlide === item.id || activeRoute === item.id) ? 
-            <div className='carousel_block' ref={activeSlide === item.id ? staticJsx : targetJsx} key={i}>{item.jsx}</div>   
-            : null
+            // (activeSlide === item.id || activeRoute === item.id) ? 
+            <div 
+              className={(activeSlide === item.id || activeRoute === item.id) ? 'carousel_block' : 'outScreen'} 
+              ref={activeSlide === item.id ? staticJsx : activeRoute === item.id ? targetJsx : null} 
+              key={i}>
+                {item.jsx}
+              </div>              
             )}
         </div>        
     )

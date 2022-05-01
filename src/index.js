@@ -70,7 +70,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     // <Provider store={store}>
         <Router>
             <App/>
-            <Routes>                    
+            <Routes>       
+                {links.map(item => <Route path={item.href} element={<></>}/>)}             
                 <Route path='*' element={<></>}/> 
             </Routes> 
         </Router>        

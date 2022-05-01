@@ -169,16 +169,30 @@
 
 @media screen and (max-device-height: 350px) and (min-width: 650px) {
     .main_title {
-        font-size: 14px;
-        margin-top: 10px;
+        font-size: 12px;
+        margin-top: 5px;
     }
     .main_description {
-        font-size: 12px;
+        font-size: 10px;
         text-align: center;
         letter-spacing: 2px;
     }
+    .main_description_buf {
+        margin-top: 20px;
+    }
     .main_robo {
+        width: 100px;
+        height: 115px;
         margin: 4px;
+    }
+    .main_robo_hand {
+        width: 40px;
+        height: 27px;
+        top: 34px;
+        left: 8px;
+    }
+    .main_robo_ball {
+        display: none;
     }
 }
 
