@@ -68,6 +68,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Router>
         <Routes>      
             {/* {links.map(item => <Route path={item.href} element={<></>}/>)}              */}
+            <Route path='/' element={<App/>}/>
+            <Route path='/works' element={<App/>}/>
+            <Route path='/skils' element={<App/>}/>
+            <Route path='/contacts' element={<App/>}/>
             <Route path='*' element={<App/>}/> 
         </Routes> 
     </Router>  
