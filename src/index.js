@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom/client';
-// import { Provider, useSelector } from 'react-redux';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
 
 import './styles/style.scss';
@@ -12,7 +11,6 @@ import Carousel from './components/others/carousel/Carousel';
 import Bgt from './components/others/bg/bgt';
 import Bgs from './components/others/bg/bgs';
 
-// import store from './redux/store';
 
 const bg = Math.floor(Math.random() * 2);
 
@@ -67,13 +65,10 @@ const App = () => {
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    // <Provider store={store}>
-        <Router>
-            <App/>
-            <Routes>       
-                {links.map(item => <Route path={item.href} element={<></>}/>)}             
-                <Route path='*' element={<></>}/> 
-            </Routes> 
-        </Router>        
-    // </Provider>
+    <Router>
+        <Routes>      
+            {/* {links.map(item => <Route path={item.href} element={<></>}/>)}              */}
+            <Route path='*' element={<App/>}/> 
+        </Routes> 
+    </Router>  
 )
