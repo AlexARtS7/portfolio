@@ -1,5 +1,5 @@
 
-export default function Main() {
+export default function MainPage() {
     return (
         <div className='main main_center'>
             <div className='main_robo_block'>

@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Link, useLocation, useNavigate 
 import './styles/style.scss';
 
 import Navigation from './components/NavigationPanel';
-import Main from './components/MainPage';
+import MainPage from './components/MainPage';
 import Carousel from './components/others/carousel/Carousel';
 
 import Bgt from './components/others/bg/bgt';
@@ -15,12 +15,12 @@ import Bgs from './components/others/bg/bgs';
 const bg = Math.floor(Math.random() * 2);
 
 const links = [
-    {rus: 'ОбоМне', href: '/', jsx: <Main/>, id: 0}, 
-    {rus: 'Работы', href: '/works', jsx: <Main/>, id: 1},
-    {rus: 'Скилы', href: '/skils', jsx: <Main/>, id: 2},
-    {rus: 'Контакты', href: '/contacts', jsx: <Main/>, id: 3}];
+    {rus: 'ОбоМне', href: '/', jsx: <MainPage/>, id: 0}, 
+    {rus: 'Работы', href: '/works', jsx: <MainPage/>, id: 1},
+    {rus: 'Скилы', href: '/skils', jsx: <MainPage/>, id: 2},
+    {rus: 'Контакты', href: '/contacts', jsx: <MainPage/>, id: 3}];
 
-const App = () => {
+const Main = () => {
     const location = useLocation().pathname;
     const navigate = useNavigate();
     const [activeRoute, setActiveRoute] = useState(0);
@@ -52,27 +52,30 @@ const App = () => {
         setActiveRoute(index);
     }, [location]);
 
-    return (        
+    return (     
         <div className='app' onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
             {/* <div className='bgcontainer'>
                 {bg ? <Bgs/>:<Bgt/>}
             </div>                 */}
         <div className='app_backimage'/>
         <Navigation activeRoute={activeRoute} links={links}/> 
-            <Carousel activeRoute={activeRoute} links={links}/>            
-        </div>    
+            <Carousel activeRoute={activeRoute} links={links}/>    
+            
+        
+              
+        </div> 
     )
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-    <Router>
-        <Routes>      
-            {/* {links.map(item => <Route path={item.href} element={<></>}/>)}              */}
-            <Route path='/' element={<App/>}/>
-            <Route path='/works' element={<App/>}/>
-            <Route path='/skils' element={<App/>}/>
-            <Route path='/contacts' element={<App/>}/>
-            <Route path='*' element={<App/>}/> 
-        </Routes> 
-    </Router>  
-)
+const App = () => {
+    return (
+        <Router>
+            <Routes>      
+                {/* {links.map(item => <Route path={item.href} element={<></>}/>)}              */}
+                <Route path='*' element={<Main/>}/> 
+            </Routes> 
+        </Router>
+    )
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>)
