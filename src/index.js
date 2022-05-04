@@ -9,12 +9,6 @@ import MainPage from './components/MainPage';
 import WorksPage from './components/WorksPage';
 import Carousel from './components/others/carousel/Carousel';
 
-import Bgt from './components/others/bg/bgt';
-import Bgs from './components/others/bg/bgs';
-
-
-const bg = Math.floor(Math.random() * 2);
-
 const links = [
     {rus: 'ОбоМне', href: '/', jsx: <MainPage/>, id: 0}, 
     {rus: 'Работы', href: '/works', jsx: <WorksPage/>, id: 1},
@@ -54,13 +48,9 @@ const App = () => {
     }, [location]);
 
     return (     
-        <div className='app' onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
-            <div className='bgcontainer'>
-                {/* {bg ? <Bgs/>:<Bgt/>} */}
-                <Bgs/>
-            </div>                
-        <div className='app_backimage'/>
-        <Navigation activeRoute={activeRoute} links={links}/> 
+        <div className='app' onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>             
+            <div className='app_backimage'/>
+            <Navigation activeRoute={activeRoute} links={links}/> 
             <Carousel activeRoute={activeRoute} links={links}/>    
       
         </div> 

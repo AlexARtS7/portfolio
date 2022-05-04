@@ -1,12 +1,17 @@
+import { useState } from 'react';
+
 import { workImages } from "./others/workImages"
+import WorkInfo from './others/workInfo/WorkInfo';
 
 export default function WorksPage() {
     return (
         <div className='works'>
+            <WorkInfo/>
             <div className='works_list'>
                 {workImages.map((item, i) => 
                 <div className='works_list_item' key={i}>
                     <div className='works_list_item_description_block'>
+                        <div className='works_list_item_description_block_im'/>
                         <div className='flex_between'>
                             <p className='works_list_item_description_title'>{item.name}</p>
                             {item.date && <p className='works_list_item_description_title'>{item.date}</p>}
@@ -27,7 +32,7 @@ export default function WorksPage() {
                     </div>
                 </div>
                 )}                
-            </div>            
+            </div>                       
         </div>        
     )
 }

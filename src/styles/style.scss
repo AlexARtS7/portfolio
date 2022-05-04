@@ -42,7 +42,7 @@ body {
     width: 100vw;
     overflow: hidden;
     position: fixed;
-    background-color: rgb(21, 27, 27);
+    background-color: rgb(30, 39, 39);
     &_backimage {
         background: url(../resources/bg.jpg) repeat;
         width: 100vw;
@@ -52,10 +52,6 @@ body {
         // animation: bgTranc 45s infinite linear;
         z-index: -2;
     }
-}
-
-.bgcontainer {
-    z-index: -5;
 }
 
 .flex {

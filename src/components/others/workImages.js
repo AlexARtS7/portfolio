@@ -18,16 +18,14 @@ export const workImages = [
         description: 'Приложение обрабатывает звуковой поток.', 
         http: 'https://svmachine.ru',
         date: '11.2021 - 02.2022', 
-        type: 'SPA',
         stack: 'SPA / React / React-Redux / Sass', 
         src: [sv1,sv2,sv3]
     },
     {   
         name: 'Сувенирсам', 
-        description: 'Приложение обрабатывает звуковой поток.', 
+        description: 'Онлайн магазин.', 
         http: 'https://сувенирсам.рф',
         date: '09.2019 - 03.2020', 
-        type: 'WebApp',
         stack: 'WebSite / Js / Html / Css', 
         src: [suv1,suv2,suv3]
     },
@@ -36,7 +34,6 @@ export const workImages = [
         description: 'Приложение обрабатывает звуковой поток.', 
         http: 'https://svmachine.ru/',
         date: '11.2021 - 02.2022', 
-        type: 'WebApp',
         stack: 'SPA / React / React-Redux', 
         src: [mega1,mega2,mega3]
     },
@@ -44,8 +41,7 @@ export const workImages = [
         name: 'SoundVisualMachine', 
         description: 'Приложение обрабатывает звуковой поток.', 
         http: 'https://svmachine.ru/',
-        date: '11.2021 - 02.2022', 
-        type: 'WebApp',
+        date: '11.2021 - 02.2022',
         stack: 'SPA / React / React-Redux', 
         src: [sv1,sv2,sv3]
     }
