@@ -4,7 +4,7 @@
       #{($i * 2%)} {
         transform: translate3d( (random(10) * 30px) , (random(10) * -20px), (random(10) * 20px) ) scale(random(5)) rotate((random(500) * 1deg));
         // background: hsla(random(10), 50%, 50%, .03);
-        background: radial-gradient( rgba(61, 95, 95, 0.2), rgba(100, 209, 209, .003));
+        background: radial-gradient( rgba(61, 95, 95, 0.1), rgba(100, 209, 209, .003));
       }
     }
   }

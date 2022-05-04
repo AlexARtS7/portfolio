@@ -6,6 +6,7 @@ import './styles/style.scss';
 
 import Navigation from './components/NavigationPanel';
 import MainPage from './components/MainPage';
+import WorksPage from './components/WorksPage';
 import Carousel from './components/others/carousel/Carousel';
 
 import Bgt from './components/others/bg/bgt';
@@ -16,14 +17,14 @@ const bg = Math.floor(Math.random() * 2);
 
 const links = [
     {rus: 'ОбоМне', href: '/', jsx: <MainPage/>, id: 0}, 
-    {rus: 'Работы', href: '/works', jsx: <MainPage/>, id: 1},
+    {rus: 'Работы', href: '/works', jsx: <WorksPage/>, id: 1},
     {rus: 'Скилы', href: '/skils', jsx: <MainPage/>, id: 2},
     {rus: 'Контакты', href: '/contacts', jsx: <MainPage/>, id: 3}];
 
-const Main = () => {
+const App = () => {
     const location = useLocation().pathname;
     const navigate = useNavigate();
-    const [activeRoute, setActiveRoute] = useState(0);
+    const [activeRoute, setActiveRoute] = useState(-1);
     const [touchStart, setTouchStart] = useState(null)
     const [touchEnd, setTouchEnd] = useState(null)   
 
@@ -54,33 +55,22 @@ const Main = () => {
 
     return (     
         <div className='app' onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
-            {/* <div className='bgcontainer'>
-                {bg ? <Bgs/>:<Bgt/>}
-            </div>                 */}
+            <div className='bgcontainer'>
+                {/* {bg ? <Bgs/>:<Bgt/>} */}
+                <Bgs/>
+            </div>                
         <div className='app_backimage'/>
         <Navigation activeRoute={activeRoute} links={links}/> 
             <Carousel activeRoute={activeRoute} links={links}/>    
-            
-        
-              
+      
         </div> 
     )
 }
 
-const App = () => {
-    return (
-        <Router>
-            <Main/>
-            <Routes>      
-                {links.map(item => <Route path={item.href} element={<><div style={{'position':'fixed'}}>{item.href}</div></>}/>)}             
-                {/* <Route path='/' element={<></>}/> 
-                <Route path='/works' element={<>
-                <div style={{'position':'fixed'}}>sds</div>
-                </>}/>  */}
-                <Route path='*' element={<></>}/> 
-            </Routes> 
-        </Router>
-    )
-}
-
-ReactDOM.createRoot(document.getElementById('root')).render(<App/>)
+ReactDOM.createRoot(document.getElementById('root')).render(
+    <Router>
+        <Routes>      
+            <Route path='*' element={<App/>}/> 
+        </Routes> 
+    </Router>
+)

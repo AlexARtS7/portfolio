@@ -22,7 +22,7 @@ export default function Navigation ({activeRoute, links}) {
             </Link>
             )}
         </div>
-        <div className='navigation_date'>2019 - {new Date().getFullYear()}</div>
+        <div className='navigation_date'>2019 {new Date().getFullYear()}</div>
         </div>
     )
 }

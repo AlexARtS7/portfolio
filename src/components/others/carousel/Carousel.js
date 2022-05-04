@@ -2,23 +2,18 @@ import { useState, useEffect, useRef } from "react";
 
 import './carousel.scss';
 
-const items = [
-  {jsx: <div>1</div>, id: 0},
-  {jsx: <div>2</div>, id: 1},
-  {jsx: <div>3</div>, id: 2},
-  {jsx: <div>4</div>, id: 3},
-]
-
-
 export default function Carousel({activeRoute, links}) {
-    const [activeSlide, setActiveSlide] = useState(activeRoute)
+    const [activeSlide, setActiveSlide] = useState(0);
+    const [firstStart, setFirstStart] = useState(true);
     const staticJsx = useRef();
     const targetJsx = useRef();
 
     useEffect(() => {
-        if(activeRoute != activeSlide) {
-          staticJsx.current.className = activeRoute > activeSlide ? 'carousel_block animation_outLeft':'carousel_block animation_outRight'
-          targetJsx.current.className = activeRoute > activeSlide ? 'carousel_block animation_inRight':'carousel_block animation_inLeft'
+        if(activeRoute != activeSlide && !firstStart) {
+          staticJsx.current.className = activeRoute > activeSlide ? 
+            'carousel_block animation_outLeft':'carousel_block animation_outRight'
+          targetJsx.current.className = activeRoute > activeSlide ? 
+            'carousel_block animation_inRight':'carousel_block animation_inLeft'
             targetJsx.current.addEventListener('animationend', () => {
               targetJsx.current ? targetJsx.current.className = 'carousel_block' : null
           }, {once: true})
@@ -27,18 +22,22 @@ export default function Carousel({activeRoute, links}) {
             staticJsx.current.className = 'carousel_block outScreen'
         }, {once: true})
         }
-    }, [activeRoute, activeSlide]);
+
+        if(firstStart && activeRoute != -1) {
+          setFirstStart(false);
+          setActiveSlide(activeRoute);
+        }
+    }, [activeRoute]);
 
     return (        
         <div className='carousel'>
-            {links.map((item, i) => 
-            // (activeSlide === item.id || activeRoute === item.id) ? 
-            <div 
-              className={(activeSlide === item.id || activeRoute === item.id) ? 'carousel_block' : 'outScreen'} 
-              ref={activeSlide === item.id ? staticJsx : activeRoute === item.id ? targetJsx : null} 
-              key={i}>
-                {item.jsx}
-              </div>              
+            {!firstStart && links.map((item, i) => 
+              <div 
+                className={(activeSlide === item.id || activeRoute === item.id) ? 'carousel_block' : 'outScreen'} 
+                ref={activeSlide === item.id ? staticJsx : activeRoute === item.id ? targetJsx : null} 
+                key={i}>
+                  {item.jsx}
+              </div>             
             )}
         </div>        
     )
