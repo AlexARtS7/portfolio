@@ -18,12 +18,13 @@ export default function Carousel({links}) {
             'carousel_block animation_outLeft':'carousel_block animation_outRight'
           targetJsx.current.className = activeRoute > activeSlide ? 
             'carousel_block animation_inRight':'carousel_block animation_inLeft'
-          
+
           targetJsx.current.addEventListener('animationend', () => {
             targetJsx.current ? targetJsx.current.className = 'carousel_block' : null
           }, {once: true})
           staticJsx.current.addEventListener('animationend', () => {
             setActiveSlide(activeRoute);
+            if(workInfo) dispatch({type: 'SET_WORKINFO', payload: null});
             staticJsx.current.className = 'carousel_block outScreen'
         }, {once: true})
         };
@@ -31,10 +32,8 @@ export default function Carousel({links}) {
         if(firstStart && activeRoute != -1) {
           setFirstStart(false);
           setActiveSlide(activeRoute);
-        };
-
-        if(workInfo) dispatch({type: 'SET_WORKINFO', payload: null})
-    }, [activeRoute]);
+        };        
+    }, [activeRoute, activeSlide]);
 
     return (        
         <div className='carousel'>

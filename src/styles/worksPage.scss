@@ -22,7 +22,7 @@ $fontSize: 14px;
             cursor: pointer;
             transition: .2s;
             &_img {
-                height: 100%;
+                min-height: 100%;
                 width: 100%;
                 top:50%;
                 left:50%;
@@ -31,6 +31,9 @@ $fontSize: 14px;
             }
             &_description {
                 &_title {
+                    font-size: 14px;
+                }
+                &_date {
                     font-size: 14px;
                 }
                 &_text {
@@ -90,7 +93,6 @@ $fontSize: 14px;
                     left: -120%;
                     bottom:20px;
                     position: absolute;
-                    transition: .2s;
                     display: block;
                     color:rgb(121, 151, 216);
                     font-size: $fontSize;
@@ -134,5 +136,11 @@ $fontSize: 14px;
 @media (max-width: 1000px) {
     .works_list {
         grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    }
+    .works_list_item_description_title {
+        font-size: 12px;
+    }
+    .works_list_item_description_date {
+        display: none;
     }
 }

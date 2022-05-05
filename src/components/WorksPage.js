@@ -7,8 +7,8 @@ export default function WorksPage() {
     const workInfo = useSelector(state => state.workInfo);
 
     const onItemClick = (item) => {
-        dispatch({type: 'SET_WORKINFO', payload: item})
-    }
+        dispatch({type: 'SET_WORKINFO', payload: item});
+    };
 
     return (
         <div className='works'>
@@ -20,7 +20,7 @@ export default function WorksPage() {
                         <div className='works_list_item_description_block_im'/>
                         <div className='flex_between'>
                             <p className='works_list_item_description_title'>{item.name}</p>
-                            {item.date && <p className='works_list_item_description_title'>{item.date}</p>}
+                            {item.date && <p className='works_list_item_description_date'>{item.date}</p>}
                         </div>
                         <div className='works_list_item_description_line'></div>                          
                     </div>
@@ -37,8 +37,8 @@ export default function WorksPage() {
                         </div>                        
                     </div>
                 </div>
-                )}                
+                )};                
             </div>                       
         </div>        
-    )
-}
+    );
+};

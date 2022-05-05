@@ -5,15 +5,17 @@
     left:50%;
     transform: translate(-50%,-50%);
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.4);
+    // background-color: rgba(0, 0, 0, 0.4);
     z-index: 12;
-    animation: showWorkInfo .3s;
+    animation: showWorkInfo .4s;
     &_block {
         background-color: rgb(30, 39, 39);
+        box-shadow: 0 0 5px black;
         width: 90%;
         height: 100%;
         top:50%;
         left:50%;
+        padding-top: 50px;
         transform: translate(-50%,-50%);
         position: absolute;
         &_backimage {
@@ -21,6 +23,8 @@
             width: 100%;
             height: 100%;
             opacity: .08;
+            top: 0;
+            left: 0;
             position: absolute;
             z-index: -2;
         }
@@ -30,10 +34,14 @@
         border-bottom: .5px solid black;
         padding: 8px 20px;
         top: 10px;
+        left: 0;
         width: 100%;
         position: absolute;
         background: linear-gradient(to top, rgba(37, 57, 57), rgba(41, 81, 81));
         z-index: 5;
+        &_title {
+            margin: 0;
+        }
         &_im {
             background: url('../../../resources/bgn.jpg');
             width: 100%;
@@ -43,6 +51,85 @@
             opacity: .08;
             z-index: 6;
             position: absolute;
+        }
+    }
+    &_container {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        overflow-y: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    &_preview {
+        &_block {
+            order: 2;
+            width: 100%;
+        }
+        &_imagearea {
+            width: 85%;
+            height: calc(100vh - 160px);
+            min-height: 100%;
+            position: relative;
+            border-radius: 5px 0 0 5px;
+            background-color: rgba(118, 162, 162, 0.1);
+            &_item {
+                max-width: 95%;
+                max-height: 95%;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                position: absolute;
+                
+            }
+        }
+        &_controls {
+            overflow-y: auto;
+            width: 15%;
+            margin-left: 5px;
+            padding: 15px;
+            // border: .5px solid gray;
+            border-radius: 0 5px 5px 0;
+            background-color: rgba(118, 162, 162, 0.3);
+            &_item {
+                width: 100%;
+                cursor: pointer;
+                transition: .2s;
+                &:hover {
+                    transform: scale(1.1);
+                    box-shadow: 0 0 3px black;
+                }
+            }
+        }
+    }
+    &_description {
+        &_block {
+            order: 1;
+            width: 50%;
+            height: 100%;
+            margin-left: 5px;
+            // background-color:aliceblue;
+        }
+    }
+    &_http {
+        transition: .2s;
+        color:rgb(121, 151, 216);
+        text-decoration: underline;
+        transition: .3s;
+    }
+    &_label {
+        color: rgb(95, 201, 104);
+    }
+    &_text {
+        margin: 0;
+        // background-color:aliceblue;
+    }
+    &_animation {
+        &_in {
+            animation: in .2s;
+        }
+        &_out {
+            animation: out .2s;
         }
     }
 }
@@ -56,4 +143,48 @@
         height: 100%;
         width: 100%;
     } 
+}
+
+@keyframes in {
+    from{opacity: 1;};
+    to{opacity: 0;}
+}
+@keyframes out {
+    from{opacity: 0;};
+    to{opacity: 1;}
+}
+
+@media (max-width: 1000px) {
+    .workInfo_container {
+        display: block;
+    }
+    .workInfo_preview_controls {
+        padding: 5px;
+    }
+    .workInfo_titleBlock_title {
+        font-size: 12px;
+    }
+    .workInfo_description_block {
+        margin-top: 20px;
+        width: 100%;
+    }
+    .workInfo_label {
+        font-size: 12px;
+    }
+    .workInfo_text {
+        font-size: 12px;
+    }
+    .workInfo_description_block {
+        height: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .workInfo_preview_imagearea {
+        min-height: 10%;
+        height: 40vw;
+    }
+    .workInfo_preview_block {
+        height: 40vw;
+    }
 }
