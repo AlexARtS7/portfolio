@@ -15,6 +15,7 @@ import mega3 from '../../resources/works/mega/3.jpg';
 export const workImages = [
     {   
         name: 'SoundVisualMachine', 
+        id: 0,
         description: 'Приложение обрабатывает звуковой поток.', 
         http: 'https://svmachine.ru',
         date: '11.2021 - 02.2022', 
@@ -23,6 +24,7 @@ export const workImages = [
     },
     {   
         name: 'Сувенирсам', 
+        id: 1,
         description: 'Онлайн магазин.', 
         http: 'https://сувенирсам.рф',
         date: '09.2019 - 03.2020', 
@@ -31,6 +33,7 @@ export const workImages = [
     },
     {   
         name: 'Mega', 
+        id: 2,
         description: 'Приложение обрабатывает звуковой поток.', 
         http: 'https://svmachine.ru/',
         date: '11.2021 - 02.2022', 
@@ -39,6 +42,7 @@ export const workImages = [
     },
     {   
         name: 'SoundVisualMachine', 
+        id: 3,
         description: 'Приложение обрабатывает звуковой поток.', 
         http: 'https://svmachine.ru/',
         date: '11.2021 - 02.2022',

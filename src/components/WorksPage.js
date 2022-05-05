@@ -1,15 +1,21 @@
-import { useState } from 'react';
-
+import { useSelector, useDispatch } from 'react-redux';
 import { workImages } from "./others/workImages"
 import WorkInfo from './others/workInfo/WorkInfo';
 
 export default function WorksPage() {
+    const dispatch = useDispatch();
+    const workInfo = useSelector(state => state.workInfo);
+
+    const onItemClick = (item) => {
+        dispatch({type: 'SET_WORKINFO', payload: item})
+    }
+
     return (
         <div className='works'>
-            <WorkInfo/>
+            {workInfo && <WorkInfo/>}
             <div className='works_list'>
                 {workImages.map((item, i) => 
-                <div className='works_list_item' key={i}>
+                <div className='works_list_item' key={i} onClick={() => onItemClick(item)}>
                     <div className='works_list_item_description_block'>
                         <div className='works_list_item_description_block_im'/>
                         <div className='flex_between'>

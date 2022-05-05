@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom/client';
+import { Provider, useSelector, useDispatch } from 'react-redux';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
 
 import './styles/style.scss';
@@ -9,6 +10,8 @@ import MainPage from './components/MainPage';
 import WorksPage from './components/WorksPage';
 import Carousel from './components/others/carousel/Carousel';
 
+import store from './redux/store';
+
 const links = [
     {rus: 'ОбоМне', href: '/', jsx: <MainPage/>, id: 0}, 
     {rus: 'Работы', href: '/works', jsx: <WorksPage/>, id: 1},
@@ -16,9 +19,10 @@ const links = [
     {rus: 'Контакты', href: '/contacts', jsx: <MainPage/>, id: 3}];
 
 const App = () => {
+    const dispatch = useDispatch();
     const location = useLocation().pathname;
     const navigate = useNavigate();
-    const [activeRoute, setActiveRoute] = useState(-1);
+    const activeRoute = useSelector(state => state.activeRoute);
     const [touchStart, setTouchStart] = useState(null)
     const [touchEnd, setTouchEnd] = useState(null)   
 
@@ -44,23 +48,24 @@ const App = () => {
         let index = 0
         links.forEach((item, i) => item.href == location ? index = +i : null);
         if(index === 0) navigate('/');
-        setActiveRoute(index);
+        dispatch({type: 'SET_ACTIVEROUTE', payload: index})
     }, [location]);
 
     return (     
         <div className='app' onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>             
             <div className='app_backimage'/>
             <Navigation activeRoute={activeRoute} links={links}/> 
-            <Carousel activeRoute={activeRoute} links={links}/>    
-      
+            <Carousel links={links}/>       
         </div> 
     )
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <Router>
-        <Routes>      
-            <Route path='*' element={<App/>}/> 
-        </Routes> 
-    </Router>
+    <Provider store={store}>
+        <Router>
+            <Routes>      
+                <Route path='*' element={<App/>}/> 
+            </Routes> 
+        </Router>
+    </Provider>    
 )

@@ -1,10 +1,14 @@
 import { useState, useEffect, useRef } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 import './carousel.scss';
 
-export default function Carousel({activeRoute, links}) {
+export default function Carousel({links}) {
+  const dispatch = useDispatch();
     const [activeSlide, setActiveSlide] = useState(0);
     const [firstStart, setFirstStart] = useState(true);
+    const activeRoute = useSelector(state => state.activeRoute);
+    const workInfo = useSelector(state => state.workInfo);
     const staticJsx = useRef();
     const targetJsx = useRef();
 
@@ -14,19 +18,22 @@ export default function Carousel({activeRoute, links}) {
             'carousel_block animation_outLeft':'carousel_block animation_outRight'
           targetJsx.current.className = activeRoute > activeSlide ? 
             'carousel_block animation_inRight':'carousel_block animation_inLeft'
-            targetJsx.current.addEventListener('animationend', () => {
-              targetJsx.current ? targetJsx.current.className = 'carousel_block' : null
+          
+          targetJsx.current.addEventListener('animationend', () => {
+            targetJsx.current ? targetJsx.current.className = 'carousel_block' : null
           }, {once: true})
           staticJsx.current.addEventListener('animationend', () => {
-            setActiveSlide(activeRoute)
+            setActiveSlide(activeRoute);
             staticJsx.current.className = 'carousel_block outScreen'
         }, {once: true})
-        }
+        };
 
         if(firstStart && activeRoute != -1) {
           setFirstStart(false);
           setActiveSlide(activeRoute);
-        }
+        };
+
+        if(workInfo) dispatch({type: 'SET_WORKINFO', payload: null})
     }, [activeRoute]);
 
     return (        
