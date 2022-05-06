@@ -37,7 +37,7 @@ export default function WorksPage() {
                         </div>                        
                     </div>
                 </div>
-                )};                
+                )}               
             </div>                       
         </div>        
     );

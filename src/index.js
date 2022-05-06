@@ -14,7 +14,7 @@ import store from './redux/store';
 
 const links = [
     {rus: 'ОбоМне', href: '/', jsx: <MainPage/>, id: 0}, 
-    {rus: 'Работы', href: '/works', jsx: <WorksPage/>, id: 1},
+    {rus: 'Портфолио', href: '/portfolio', jsx: <WorksPage/>, id: 1},
     {rus: 'Скилы', href: '/skils', jsx: <MainPage/>, id: 2},
     {rus: 'Контакты', href: '/contacts', jsx: <MainPage/>, id: 3}];
 
