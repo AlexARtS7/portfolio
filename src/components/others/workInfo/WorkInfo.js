@@ -25,7 +25,7 @@ export default function WorkInfo() {
     return (
         <div className='workInfo' onClick={(e) => closeWorkInfo(e.target)}>
             <div className='workInfo_block'>
-                <div className='workInfo_block_backimage'/>
+                {/* <div className='workInfo_block_backimage'/> */}
                 <div className='workInfo_titleBlock'>
                     <div className='workInfo_titleBlock_im'/>
                     <p className='workInfo_titleBlock_title'>{item.name}</p>
