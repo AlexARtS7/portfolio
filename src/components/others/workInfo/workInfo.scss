@@ -1,3 +1,5 @@
+@import '../../../styles/variables.scss';
+
 .workInfo {
     height: 100vh;
     width: 100vw;
@@ -5,27 +7,25 @@
     left:50%;
     transform: translate(-50%,-50%);
     position: absolute;
-    // background-color: rgba(0, 0, 0, 0.4);
     z-index: 120;
     animation: showWorkInfo .4s;
     &_container {
-        background-color: rgba(30, 39, 39, .98);
+        background: $portfolioInfoBlockColor;
         box-shadow: 0 0 5px black;
         width: 90%;
         height: 100%;
         top:50%;
         left:50%;
         padding: 40px;
-        // overflow-y: auto;
         transform: translate(-50%,-50%);
         position: absolute;
     }
     &_preview {
         order: 2;
         width: 60%;
-        border-radius: 2px;
+        border-radius: $globalBorderRadius;
         box-shadow: 0 0 1px rgb(255, 255, 255);
-        background-color:rgba(56, 63, 70, .5);
+        background: $portfolioInfoImagePreviewBlockColor;
         position: relative;
         &_image {
             max-width: 95%;
@@ -35,6 +35,13 @@
             transform: translate(-50%,-50%);
             pointer-events: none;
             position: absolute;
+        }
+        &_controls {
+            position: absolute;
+            bottom:2px;
+            height: 20px;
+            width: 100%;
+            background-color:aliceblue;
         }
     }
     &_description {

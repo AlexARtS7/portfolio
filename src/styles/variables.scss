@@ -1,0 +1,19 @@
+$globalBackground: radial-gradient(rgb(47, 60, 60) 70%, rgb(74, 95, 97)); 
+$globalBackgroundImageOpacity: .1;
+
+// цвет контейнеров заголовков
+$globalBlockColor: linear-gradient(to top, rgb(51, 64, 64), rgb(35, 45, 45));
+$titleBlockColor: $globalBlockColor; 
+$navigationBlockColor: $globalBlockColor;
+
+$navigationLinkColor: linear-gradient(to top, rgba(68, 80, 80, 0.98), rgba(46, 54, 54, 0.98) 95%);
+$navigationActiveLinkColor: linear-gradient(to top, rgb(99, 119, 117), rgb(61, 75, 75) 95%);
+
+$globalBorderRadius: 8px;
+
+$portfolioInfoBlockColor: rgba(46, 54, 54, 0.98);
+$portfolioInfoImagePreviewBlockColor: rgba(56, 63, 70, .5);
+
+$scrollBarWH: 3px;
+$scrollBarBackColor: rgba(38, 55, 54, .8);
+$scrollBarThumbColor: rgba(227, 227, 227, 0.8);
