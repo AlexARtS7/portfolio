@@ -10,25 +10,51 @@ export default function WorkInfo() {
     const workInfo = useRef();
 
     const closeWorkInfo = (e) => {
-        if(e.name === 'controls') return;
+        if(e.id === 'controls' || e.id === 'controlLeft' || e.id === 'controlRight') return;
         dispatch({type: 'SET_WORKINFO', payload: null});   
     };
 
-    const onImageClick = (i) => {
-        // setActiveImage(i);
-        image.current.className = 'workInfo_preview_imagearea_item workInfo_animation_in';
-        image.current.addEventListener('animationend', () => {
-            setActiveImage(i);
-            image.current.className = 'workInfo_preview_imagearea_item workInfo_animation_out';
-        }, {once: true})
+    const onControlsClick = (action) => {
+        let res = activeImage + action;
+        if(res < 0) res = item.src.length - 1;
+        if(res > item.src.length - 1) res = 0;  
+        setActiveImage(res);
     };
 
+    const onImageClick = (i) => {
+        // image.current.className = 'workInfo_preview_imagearea_item workInfo_animation_in';
+        // image.current.addEventListener('animationend', () => {
+        //     setActiveImage(i);
+        //     image.current.className = 'workInfo_preview_imagearea_item workInfo_animation_out';
+        // }, {once: true})
+        setActiveImage(i)
+    };
+    
     return (
         <div className='workInfo' onClick={(e) => closeWorkInfo(e.target)} ref={workInfo}>    
             <div className='workInfo_container flex_between'>
                 <div className='workInfo_preview'>
-                    <img className='workInfo_preview_image' ref={image} src={item.src[activeImage]}></img>
-                    <div className='workInfo_preview_controls'>sfs</div>
+                    <img className='workInfo_preview_image' ref={image} src={item.src[activeImage]} draggable='false'></img>
+                    <div 
+                        className='workInfo_preview_controls_left' 
+                        onClick={() => onControlsClick(-1)}
+                        id='controlLeft'>&lsaquo;</div>
+                    <div 
+                        className='workInfo_preview_controls_right' 
+                        onClick={() => onControlsClick(+1)}
+                        id='controlRight'>&rsaquo;</div>
+                    <div className='workInfo_preview_controls flex_center'>
+                        {item.src.map((s,i) => 
+                            <img 
+                                className={activeImage === i ?
+                                'workInfo_preview_controls_image workInfo_preview_controls_image_active':
+                                'workInfo_preview_controls_image'}
+                                onClick={() => onImageClick(i)}
+                                id='controls'
+                                draggable='false'
+                                key={i}
+                                src={s}/>)}
+                    </div>
                 </div>
                 <div className='workInfo_description'>
                     <div className='workInfo_description_nameblock'>
