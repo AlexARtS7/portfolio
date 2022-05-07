@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import './workInfo.scss';
 
@@ -8,6 +8,7 @@ export default function WorkInfo() {
     const [activeImage, setActiveImage] = useState(0);
     const image = useRef();
     const workInfo = useRef();
+    const description = useRef();
 
     const closeWorkInfo = (e) => {
         if(e.id === 'controls' || e.id === 'controlLeft' || e.id === 'controlRight') return;
@@ -29,6 +30,12 @@ export default function WorkInfo() {
         // }, {once: true})
         setActiveImage(i)
     };
+
+    useEffect(() => {
+        description.current.addEventListener('animationend', () => {    
+            description.current.style = 'overflow-y: auto';
+        }, {once: true})
+    }, [])
     
     return (
         <div className='workInfo' onClick={(e) => closeWorkInfo(e.target)} ref={workInfo}>    
@@ -56,7 +63,7 @@ export default function WorkInfo() {
                                 src={s}/>)}
                     </div>
                 </div>
-                <div className='workInfo_description'>
+                <div className='workInfo_description' ref={description}>
                     <div className='workInfo_description_nameblock'>
                         <p>{item.name}</p>
                         <div className='workInfo_description_line'/> 

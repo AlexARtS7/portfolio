@@ -1,20 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.107fdd62.css",
-    "main.js": "/static/js/main.7ee18f9e.js",
-    "static/media/bg.jpg": "/static/media/bg.6ee34eb341283d1dc48e.jpg",
-    "static/media/MontserratAlternates-Light.ttf": "/static/media/MontserratAlternates-Light.f108b24eefec66e65492.ttf",
-    "static/media/robo.svg": "/static/media/robo.c22085a5fbaf89b402e9.svg",
-    "static/media/roboHand.svg": "/static/media/roboHand.87477de7aa4c97925bec.svg",
-    "static/media/President-cyr.ttf": "/static/media/President-cyr.a36033dbfbbb945ff1e3.ttf",
+    "main.css": "/static/css/main.7d29c182.css",
+    "main.js": "/static/js/main.ee2ec1a1.js",
+    "static/media/suv1.png": "/static/media/suv1.27d6d8a009d529317f78.png",
+    "static/media/suv2.png": "/static/media/suv2.c384edab9fa5a7e66324.png",
+    "static/media/suv3.png": "/static/media/suv3.ef7382240b5a91e65fcc.png",
+    "static/media/2.jpg": "/static/media/2.61925f2b2ff8c098396f.jpg",
+    "static/media/1.jpg": "/static/media/1.0ec32999a072b2f7fd85.jpg",
+    "static/media/sv3.png": "/static/media/sv3.43b94c74b831d7969779.png",
+    "static/media/MontserratAlternates-Medium.ttf": "/static/media/MontserratAlternates-Medium.ae41054b33bf901739c8.ttf",
+    "static/media/sv1.png": "/static/media/sv1.7faceac9ad7a91b19a37.png",
+    "static/media/3.jpg": "/static/media/3.bffe018af1f2b57b9dd4.jpg",
+    "static/media/sv2.png": "/static/media/sv2.10afd66af5fd47c22005.png",
+    "static/media/2.png": "/static/media/2.4c4cd7c2cbb7485174eb.png",
+    "static/media/3.png": "/static/media/3.a98953aca3af787eab42.png",
+    "static/media/1.png": "/static/media/1.4bd4183ad70342dbf016.png",
+    "static/media/bg.jpg": "/static/media/bg.d2bcfa6339727d11a3dc.jpg",
     "static/media/bgn.jpg": "/static/media/bgn.1b2db6f1403b5bdf5719.jpg",
     "static/media/logo.svg": "/static/media/logo.50b1b82a7552fd5d0daea0864a570ac6.svg",
     "index.html": "/index.html",
-    "main.107fdd62.css.map": "/static/css/main.107fdd62.css.map",
-    "main.7ee18f9e.js.map": "/static/js/main.7ee18f9e.js.map"
+    "main.7d29c182.css.map": "/static/css/main.7d29c182.css.map",
+    "main.ee2ec1a1.js.map": "/static/js/main.ee2ec1a1.js.map"
   },
   "entrypoints": [
-    "static/css/main.107fdd62.css",
-    "static/js/main.7ee18f9e.js"
+    "static/css/main.7d29c182.css",
+    "static/js/main.ee2ec1a1.js"
   ]
 }

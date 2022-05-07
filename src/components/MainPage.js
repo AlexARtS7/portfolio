@@ -6,7 +6,7 @@ export default function MainPage() {
             <br/><br/>
             {/* <p>Программирование логики SPA приложений.</p>    */}
             <br/><br/>
-            <p>Js / React / React-Redux / Redux-Saga</p>          
+            <p>Js / TypeScript / React / React-Redux / Redux-Saga</p>          
         </div>        
     )
 }

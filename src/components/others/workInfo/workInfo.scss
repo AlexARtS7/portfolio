@@ -23,9 +23,9 @@
     &_preview {
         order: 2;
         width: 60%;
-        border-radius: $globalBorderRadius;
+        // border-radius: $globalBorderRadius;
         box-shadow: 0 0 1px rgb(255, 255, 255);
-        background: $portfolioInfoImagePreviewBlockColor;
+        // background: $portfolioInfoImagePreviewBlockColor;
         overflow: hidden;
         position: relative;
         &_image {
@@ -104,16 +104,16 @@
     }
     &_description {
         order: 1;
-        width: 35%;
+        width: 38%;
         overflow: hidden;
         position: relative;
         &_nameblock {
-            width: 100%;
+            width: 95%;
             position: absolute;
             animation: showName 1s ease-out;
         }
         &_descriptionblock {
-            width: 100%;
+            width: 95%;
             height: calc(100% - 35px);
             bottom:0;
             position: absolute;
@@ -198,22 +198,12 @@
     } 
 }
 
-// @keyframes in {
-//     from{opacity: 1;};
-//     to{opacity: 0;}
-// }
-// @keyframes out {
-//     from{opacity: 0;};
-//     to{opacity: 1;}
-// }
 
-
-// @media (max-width: 600px) {
-//     .workInfo_preview_imagearea {
-//         min-height: 10%;
-//         height: 40vw;
-//     }
-//     .workInfo_preview_block {
-//         height: 40vw;
-//     }
-// }
+@media (max-width: 1000px) {
+    .workInfo_preview {
+        display: none;
+    }
+    .workInfo_description {
+        width: 100%;
+    }
+}

@@ -8,6 +8,7 @@ import './styles/style.scss';
 import Navigation from './components/NavigationPanel';
 import MainPage from './components/MainPage';
 import WorksPage from './components/WorksPage';
+import SkilsPage from './components/SkilsPage';
 import Carousel from './components/others/carousel/Carousel';
 
 import store from './redux/store';
@@ -15,7 +16,7 @@ import store from './redux/store';
 const links = [
     {rus: 'ОбоМне', href: '/', jsx: <MainPage/>, id: 0}, 
     {rus: 'Портфолио', href: '/portfolio', jsx: <WorksPage/>, id: 1},
-    {rus: 'Скилы', href: '/skils', jsx: <MainPage/>, id: 2},
+    {rus: 'Скилы', href: '/skils', jsx: <SkilsPage/>, id: 2},
     {rus: 'Контакты', href: '/contacts', jsx: <MainPage/>, id: 3}];
 
 const App = () => {
