@@ -8,7 +8,7 @@ import './styles/style.scss';
 import Navigation from './components/NavigationPanel';
 import MainPage from './components/MainPage';
 import WorksPage from './components/WorksPage';
-import SkilsPage from './components/SkilsPage';
+import ContactsPage from './components/ContactsPage';
 import Carousel from './components/others/carousel/Carousel';
 
 import store from './redux/store';
@@ -16,8 +16,7 @@ import store from './redux/store';
 const links = [
     {rus: 'ОбоМне', href: '/', jsx: <MainPage/>, id: 0}, 
     {rus: 'Портфолио', href: '/portfolio', jsx: <WorksPage/>, id: 1},
-    {rus: 'Скилы', href: '/skils', jsx: <SkilsPage/>, id: 2},
-    {rus: 'Контакты', href: '/contacts', jsx: <MainPage/>, id: 3}];
+    {rus: 'Контакты', href: '/contacts', jsx: <ContactsPage/>, id: 2}];
 
 const App = () => {
     const dispatch = useDispatch();
@@ -27,7 +26,7 @@ const App = () => {
     const [touchStart, setTouchStart] = useState(null)
     const [touchEnd, setTouchEnd] = useState(null)   
 
-    const minSwipeDistance = 50; 
+    const minSwipeDistance = 150; 
 
     const onTouchStart = (e) => {
       setTouchEnd(null)

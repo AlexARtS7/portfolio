@@ -1,12 +1,17 @@
+import man from '../resources/manR.svg';
 
 export default function MainPage() {
     return (
         <div className='main'>
-            <h1 className='main_title'>Привет! Меня зовут Александр!<br/><br/>Я занимаюсь веб разработкой.</h1>
-            <br/><br/>
-            {/* <p>Программирование логики SPA приложений.</p>    */}
-            <br/><br/>
-            <p>Js / TypeScript / React / React-Redux / Redux-Saga</p>          
+            <img className='main_img' src={man} alt='ds'></img>
+            <div className='main_buf'/>
+            <h2 className='main_title'>Привет!</h2>
+            <div className='main_buf'/>
+            <h2 className='main_title'>Меня зовут Александр.</h2>
+            <div className='main_buf'/>
+            <h2 className='main_title'>Я занимаюсь веб разработкой.</h2>
+            <div className='main_buf'/>           
+            <p className='main_text'>Js / React / React-Redux / Redux-Saga</p>          
         </div>        
     )
 }
