@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { workImages } from "./others/workImages"
-import WorkInfo from './others/workInfo/WorkInfo';
+import { workImages } from "../others/workImages"
+import WorkInfo from '../others/workInfo/WorkInfo';
+import './worksPage.scss';
 
 export default function WorksPage() {
     const dispatch = useDispatch();

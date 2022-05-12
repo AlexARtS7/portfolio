@@ -5,10 +5,6 @@
 }
 
 @import './variables.scss';
-@import './navigationPanel.scss';
-@import './mainPage.scss';
-@import './worksPage.scss';
-@import './contactsPage.scss';
 
 * {
     font-family: 'MontserratAlternates', sans-serif;
@@ -25,8 +21,6 @@
         transition: 1s;
     }
     &::-webkit-scrollbar-thumb {
-        // width: $scrollBarWH;
-        // height: $scrollBarWH;
         background: $scrollBarThumbColor;
         border-radius: 5px;
         transition: 1s;
@@ -69,11 +63,11 @@ body {
     }
 }
 
-@keyframes bgTranc {
-    0% {
-        transform: translateY(0)
-    }
-    100% {
-        transform: translateY(-50%)
-    }        
-}
+// @keyframes bgTranc {
+//     0% {
+//         transform: translateY(0)
+//     }
+//     100% {
+//         transform: translateY(-50%)
+//     }        
+// }

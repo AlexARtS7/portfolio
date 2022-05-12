@@ -1,0 +1,83 @@
+@import '../../styles/variables.scss';
+
+.contacts {
+    margin: 0 10px;
+    width: calc(100vw - 20px);
+    height: 100%;
+    color: white;
+    padding: 20px;
+    &_text {
+        font-size: 16px;
+        text-align: center;
+        text-shadow: 1px 1px 1px black;
+    }
+    &_block {
+        width: 100%;
+    }
+    &_mail {
+        margin-top: 50px;
+        height: 35px;
+        text-align: center;
+        &_text {
+            font-size: 24px;
+            display: inline-block;
+            transform: translate(10px, -10px);
+            text-shadow: 1px 1px 1px black;
+            user-select: all;
+        }
+        &_logo {
+            height: 100%;
+        }
+    }
+    &_telegram {
+        margin-top: 100px;
+        height: 35px;
+        text-align: center;
+        &_text {
+            font-size: 24px;
+            display: inline-block;
+            transform: translate(10px, -10px);
+            text-shadow: 1px 1px 1px black;
+            user-select: all;
+        }
+        &_logo {
+            height: 100%;
+        }
+    }
+}
+
+@media (max-height: 500px) {
+    .contacts_block {
+        display: flex;
+        justify-content: space-around;
+    }
+    .contacts_telegram {
+        margin-top: 10px;
+    }
+    .contacts_mail {
+        margin-top: 10px;
+    }
+    .contacts_text {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    .contacts_telegram {
+        height: 20px;
+    }
+    .contacts_telegram_text {
+        font-size: 12px;
+        transform: translate(10px, -6px);
+    }
+    .contacts_mail {
+        height: 20px;
+    }
+    .contacts_mail_text {
+        font-size: 12px;
+        transform: translate(10px, -6px);
+    }
+    .contacts_text {
+        font-size: 12px;
+    }
+}

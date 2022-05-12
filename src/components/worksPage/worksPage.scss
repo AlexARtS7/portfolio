@@ -1,3 +1,4 @@
+@import '../../styles/variables.scss';
 $fontSize: 14px;
 
 .works {
@@ -59,7 +60,7 @@ $fontSize: 14px;
                     background: $titleBlockColor;
                     z-index: 5;
                     &_im {
-                        background: url('../resources/bgn.jpg');
+                        background: url('../../resources/bgn.jpg');
                         width: 100%;
                         height: 100%;
                         left: 0;

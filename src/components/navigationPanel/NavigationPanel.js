@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-import logo from '../resources/logo.svg';
+import logo from '../../resources/logo.svg';
 
-
+import './navigationPanel.scss';
 
 export default function Navigation ({activeRoute, links}) {
     return (

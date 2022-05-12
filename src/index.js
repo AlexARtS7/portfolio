@@ -5,11 +5,13 @@ import { BrowserRouter as Router, Routes, Route, Link, useLocation, useNavigate 
 
 import './styles/style.scss';
 
-import Navigation from './components/NavigationPanel';
-import MainPage from './components/MainPage';
-import WorksPage from './components/WorksPage';
-import ContactsPage from './components/ContactsPage';
+import Navigation from './components/navigationPanel/NavigationPanel';
+import MainPage from './components/mainPage/MainPage';
+import WorksPage from './components/worksPage/WorksPage';
+import ContactsPage from './components/contactsPage/ContactsPage';
 import Carousel from './components/others/carousel/Carousel';
+
+import Bgt from './components/others/bgs/bgt';
 
 import store from './redux/store';
 
@@ -54,6 +56,7 @@ const App = () => {
     return (     
         <div className='app' onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>             
             <div className='app_backimage'/>
+            <Bgt/>
             <Navigation activeRoute={activeRoute} links={links}/> 
             <Carousel links={links}/>       
         </div> 
