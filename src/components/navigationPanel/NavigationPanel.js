@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import logo from '../../resources/logo.svg';
 
@@ -25,4 +24,4 @@ export default function Navigation ({activeRoute, links}) {
             <div className='navigation_date'>2019 {new Date().getFullYear()}</div>
         </div>  
     )
-}
+};
