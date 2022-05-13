@@ -14,31 +14,25 @@
     &_block {
         width: 100%;
     }
-    &_mail {
-        margin-top: 50px;
-        height: 35px;
+    &_link {
+        display: block;
+        margin: 70px auto 0;
+        padding: 8px;
+        height: 45px;
+        width: 500px;
+        border-radius: 5px;
         text-align: center;
+        opacity: .8;
+        background: $globalBlockColor;
+        transition: .2s;
+        cursor: pointer;
         &_text {
+            color: white;
             font-size: 24px;
             display: inline-block;
-            transform: translate(10px, -10px);
+            transform: translate(10px, -7px);
             text-shadow: 1px 1px 1px black;
-            user-select: all;
-        }
-        &_logo {
-            height: 100%;
-        }
-    }
-    &_telegram {
-        margin-top: 100px;
-        height: 35px;
-        text-align: center;
-        &_text {
-            font-size: 24px;
-            display: inline-block;
-            transform: translate(10px, -10px);
-            text-shadow: 1px 1px 1px black;
-            user-select: all;
+            // user-select: all;
         }
         &_logo {
             height: 100%;
@@ -51,33 +45,35 @@
         display: flex;
         justify-content: space-around;
     }
-    .contacts_telegram {
-        margin-top: 10px;
-    }
-    .contacts_mail {
-        margin-top: 10px;
+    .contacts_link {
+        margin-top: 30px;
     }
     .contacts_text {
         font-size: 12px;
     }
 }
 
-@media (max-width: 500px) {
-    .contacts_telegram {
-        height: 20px;
+@media (max-width: 1200px) {
+    .contacts_link {
+        height: 30px;
+        width: 200px;
+        &:hover {
+            width: 350px;
+        }
     }
-    .contacts_telegram_text {
+    .contacts_link_text {
         font-size: 12px;
-        transform: translate(10px, -6px);
-    }
-    .contacts_mail {
-        height: 20px;
-    }
-    .contacts_mail_text {
-        font-size: 12px;
-        transform: translate(10px, -6px);
+        transform: translate(10px, -4px);
     }
     .contacts_text {
         font-size: 12px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .contacts_link {
+        &:hover {
+            width: 650px;
+        }
     }
 }
